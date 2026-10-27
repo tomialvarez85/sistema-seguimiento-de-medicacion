@@ -1,0 +1,145 @@
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  gap: var(--s5);
+  align-items: start;
+}
+.formCard {
+  position: sticky;
+  top: 6.5rem;
+}
+.grupo + .grupo {
+  margin-top: var(--s5);
+}
+.grupoTitulo {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  margin-bottom: var(--s3);
+}
+.grupoTitulo .horario {
+  color: var(--text-muted);
+  font-weight: 400;
+  font-size: 1rem;
+}
+.lista {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--s2);
+}
+.med {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s4);
+  padding: var(--s3) var(--s4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+.med.editando {
+  border: 2px solid var(--primary);
+  background: var(--primary-soft);
+}
+.medIcon {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 12px;
+  border: none;
+  background: var(--surface-2);
+  color: var(--primary);
+  display: grid;
+  place-items: center;
+  flex: none;
+}
+button.medIcon {
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.1s ease;
+}
+button.medIcon:hover {
+  transform: scale(1.06);
+}
+button.medIcon:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+.paletaColores {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(3.25rem, 1fr));
+  gap: var(--s3);
+  margin-top: var(--s4);
+}
+.colorOpcion {
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  display: grid;
+  place-items: center;
+  color: #fff;
+  cursor: pointer;
+}
+.colorOpcion:hover {
+  transform: scale(1.08);
+}
+.colorOpcion:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+.medInfo {
+  flex: 1 1 12rem;
+  min-width: 0;
+}
+.medNombre {
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s2);
+  align-items: center;
+}
+.medDosis {
+  color: var(--text-muted);
+}
+.acciones {
+  margin-left: auto;
+  display: flex;
+  gap: var(--s2);
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.horarios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: var(--s3);
+  margin-top: var(--s3);
+}
+.horarioItem {
+  padding: var(--s4);
+  border-radius: var(--radius);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 1150px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .formCard {
+    position: static;
+    order: -1;
+  }
+}
+@media (max-width: 560px) {
+  .med {
+    flex-wrap: wrap;
+  }
+  .acciones {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}

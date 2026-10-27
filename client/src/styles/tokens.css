@@ -1,0 +1,66 @@
+/* Sistema visual del Pastillero digital.
+   Letra y contraste fijos (decisión del Sprint 3), elegidos para leerse con claridad.
+   Todos los pares texto/fondo superan 4.5:1 (WCAG AA); los textos de estado superan 7:1. */
+:root {
+  /* Fondos y superficies */
+  --bg: #f3f8f7;
+  --bg-accent: #e6f2ef;
+  --surface: #ffffff;
+  --surface-2: #f6faf9;
+  --border: #d3e2de;
+  --border-strong: #a9c4bd;
+
+  /* Texto */
+  --text: #132b27;
+  --text-muted: #44605a;
+  --text-soft: #5b736d;
+  --on-primary: #ffffff;
+
+  /* Marca: verde sanitario y azul suave */
+  --primary: #0b6e63;
+  --primary-hover: #08594f;
+  --primary-soft: #dff1ec;
+  --primary-line: #9fd2c6;
+  --blue: #1d5c95;
+  --blue-soft: #e4eef8;
+  --blue-line: #a9c6e3;
+
+  /* Estados (siempre acompañados de símbolo y texto) */
+  --ok: #17683a;
+  --ok-soft: #e1f3e7;
+  --ok-line: #9ccfae;
+  --pending: #7a4d00;
+  --pending-soft: #fdf2d8;
+  --pending-line: #ebc874;
+  --no: #a3261d;
+  --no-soft: #fbe8e6;
+  --no-line: #eba79f;
+  --late: #5b3e9e;
+  --late-soft: #efe9fa;
+  --late-line: #c3b1e8;
+  --neutral: #4c5b58;
+  --neutral-soft: #eef1f0;
+
+  --focus: #1d5c95;
+
+  /* Forma */
+  --radius-sm: 10px;
+  --radius: 16px;
+  --radius-lg: 22px;
+  --shadow-sm: 0 1px 2px rgba(19, 43, 39, 0.06), 0 1px 3px rgba(19, 43, 39, 0.05);
+  --shadow: 0 2px 6px rgba(19, 43, 39, 0.06), 0 8px 24px rgba(19, 43, 39, 0.06);
+  --shadow-lg: 0 12px 40px rgba(19, 43, 39, 0.18);
+
+  /* Espaciado */
+  --s1: 0.25rem;
+  --s2: 0.5rem;
+  --s3: 0.75rem;
+  --s4: 1rem;
+  --s5: 1.5rem;
+  --s6: 2rem;
+  --s7: 3rem;
+
+  --font: 'Atkinson Hyperlegible', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  --tap: 3.25rem; /* altura mínima de controles: ~58 px */
+  --content: 76rem;
+}

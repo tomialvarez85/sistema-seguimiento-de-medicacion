@@ -1,0 +1,123 @@
+.resumen {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: var(--s5);
+  align-items: center;
+  background: linear-gradient(135deg, #ffffff 0%, #eef8f5 60%, #e7f0f9 100%);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: var(--s6);
+  margin-bottom: var(--s5);
+}
+.saludo {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+.fecha {
+  font-size: 2.1rem;
+  margin: var(--s1) 0 var(--s3);
+}
+.frase {
+  font-size: 1.25rem;
+}
+.frase strong {
+  color: var(--primary-hover);
+}
+
+.progreso {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: var(--s4) var(--s5);
+}
+.barra {
+  display: flex;
+  height: 1.1rem;
+  border-radius: 999px;
+  overflow: hidden;
+  background: repeating-linear-gradient(45deg, #f4ead0, #f4ead0 6px, #fbf5e6 6px, #fbf5e6 12px);
+  border: 1px solid var(--pending-line);
+  margin: var(--s3) 0;
+}
+.barraOk {
+  background: var(--ok);
+}
+.barraNo {
+  background: repeating-linear-gradient(45deg, var(--no), var(--no) 5px, #c64a40 5px, #c64a40 10px);
+}
+.cuentas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--s2);
+  margin: 0;
+}
+.cuentas div {
+  display: flex;
+  flex-direction: column;
+}
+.cuentas dt {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.cuentas dd {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.ok {
+  color: var(--ok);
+}
+.pend {
+  color: var(--pending);
+}
+.no {
+  color: var(--no);
+}
+
+.bloques {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(30rem, 100%), 1fr));
+  gap: var(--s5);
+  align-items: start;
+}
+
+.listaDialogo {
+  margin: var(--s2) 0 0;
+  padding-left: 1.3rem;
+  font-size: 1.05rem;
+}
+.grupoDialogo + .grupoDialogo {
+  margin-top: var(--s4);
+}
+.grupoDialogo h3 {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+@media (max-width: 900px) {
+  .resumen {
+    grid-template-columns: minmax(0, 1fr);
+    padding: var(--s5);
+  }
+  .fecha {
+    font-size: 1.7rem;
+  }
+}
+@media (max-width: 480px) {
+  .resumen {
+    padding: var(--s4);
+  }
+  .progreso {
+    padding: var(--s3) var(--s4);
+  }
+  .cuentas dt {
+    font-size: 0.8rem;
+  }
+}

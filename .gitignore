@@ -1,0 +1,9 @@
+node_modules/
+dist/
+*.tsbuildinfo
+.env
+
+# Bases de datos locales (contienen datos de salud: no se suben al repositorio)
+data/*.sqlite
+data/*.sqlite-wal
+data/*.sqlite-shm

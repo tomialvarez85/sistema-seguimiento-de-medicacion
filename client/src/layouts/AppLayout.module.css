@@ -1,0 +1,158 @@
+.shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+/* Ocupa todo el ancho para que el logo quede pegado a la izquierda y entre el menú completo */
+.headerInner {
+  padding: var(--s3) var(--s5);
+  display: flex;
+  align-items: center;
+  gap: var(--s5);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  text-decoration: none;
+  color: var(--text);
+  flex: none;
+}
+.logo {
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--primary), #138a7c);
+  color: #fff;
+  display: grid;
+  place-items: center;
+}
+.brandText strong {
+  display: block;
+  font-size: 1.15rem;
+  line-height: 1.1;
+}
+.brandText span {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.nav {
+  display: flex;
+  gap: var(--s1);
+  flex: 1;
+  min-width: 0;
+  flex-wrap: wrap;
+}
+.nav a {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s2);
+  min-height: 3rem;
+  padding: 0 var(--s4);
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+.nav a:hover {
+  background: var(--surface-2);
+  color: var(--text);
+}
+.nav a[aria-current='page'] {
+  background: var(--primary-soft);
+  color: var(--primary-hover);
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: var(--s3);
+  flex: none;
+}
+.userText {
+  text-align: right;
+  line-height: 1.2;
+}
+.userText strong {
+  display: block;
+}
+.userText span {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* Menú largo: va en su propia fila debajo de la marca y el usuario */
+.navAparte {
+  flex-wrap: wrap;
+  gap: var(--s3);
+}
+.navAparte .nav {
+  order: 3;
+  flex-basis: 100%;
+  padding-bottom: var(--s1);
+}
+.navAparte .user {
+  margin-left: auto;
+}
+
+.main {
+  flex: 1;
+  width: 100%;
+  max-width: var(--content);
+  margin: 0 auto;
+  padding: var(--s6) var(--s5) var(--s7);
+}
+
+.footer {
+  text-align: center;
+  color: var(--text-soft);
+  font-size: 0.85rem;
+  padding: var(--s5);
+}
+
+@media (max-width: 1400px) {
+  .headerInner {
+    flex-wrap: wrap;
+    gap: var(--s3);
+  }
+  .nav {
+    order: 3;
+    flex-basis: 100%;
+    padding-bottom: var(--s1);
+  }
+  .user {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .headerInner {
+    padding: var(--s3) var(--s4);
+  }
+  .brand {
+    flex: 1;
+    min-width: 0;
+  }
+  .userText {
+    display: none;
+  }
+  .brandText span {
+    display: none;
+  }
+  .main {
+    padding: var(--s5) var(--s4) var(--s7);
+  }
+}
